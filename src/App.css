@@ -558,7 +558,6 @@ nav a:visited {
 
 .input-submit, .input-reset {
   color: #F66031;
-  display: inline-block;
   width: 5rem;
   cursor: pointer;
   font-family: inherit;
