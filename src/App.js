@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {Route, NavLink} from 'react-router-dom'
-import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
 import Home from './Home'
@@ -14,11 +13,6 @@ class App extends Component {
         name: 'Home',
         path: '/',
         class: 'fa-home'
-      },
-      {
-        name: 'About',
-        path: '/about',
-        class: 'fa-user'
       },
       {
         name: 'Projects',
@@ -123,9 +117,6 @@ class App extends Component {
                 <Home
                   navClick={this.navClick}
                   />
-              )}/>
-            <Route path='/about' render={({history}) => (
-                <About/>
               )}/>
             <Route path='/projects' render={({history}) => (
                 <Projects/>
