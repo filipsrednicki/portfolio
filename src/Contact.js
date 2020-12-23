@@ -21,7 +21,7 @@ class Contact extends Component {
           <h1 className='main-heading'><Zoom cascade top>Contact Me</Zoom></h1>
         </ReactFitText>
         <Fade left><hr className='separator'/></Fade>
-        <Fade delay={200} duration={3000}><p>To contact me you can use the form below or simply e-mail me at: <span className='p-email'>srednifilipq@gmail.com</span></p></Fade>
+        <Fade delay={200} duration={3000}><p>To contact me you can use the form below or simply e-mail me at: <span className='p-email'>filipsrednicki42@gmail.com</span></p></Fade>
         <Zoom>
         <form name='gform' id='gform' encType='text/plain' action='https://docs.google.com/forms/d/e/1FAIpQLSff-I3sXKTHvt4xI_ix5Lixsw43oCgBYfs-A47_QGc_HZCg2w/formResponse?' target='hidden_iframe' onSubmit={this.formSubmitted}>
           <div className='contact-thanks'>
