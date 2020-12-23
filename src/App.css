@@ -199,7 +199,7 @@ nav a:visited {
   text-shadow: 0 0 10px #184a95, 0 0 20px #184a95, 0 0 30px #184a95, 0 0 40px #184a95, 0 0 30px #EDF7F6;
 }
 
-.contact-btn {
+.projects-btn {
   color: #1C1D21;
   font-size: 1.3rem;
   display: block;
@@ -213,7 +213,7 @@ nav a:visited {
   transition: all 0.6s ease-in-out;
 }
 
-.contact-btn:hover {
+.projects-btn:hover {
   color: #F66031;
   box-shadow: 0 0 10px 0 #F66031 inset, 0 0 10px 4px #F66031;
 }

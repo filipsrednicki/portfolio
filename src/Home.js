@@ -28,12 +28,12 @@ class Home extends Component {
         <div className='home-right'>
           <Zoom delay={150} duration={2000}>
           <Link
-            to='/contact'
-            className='contact-btn'
+            to='/projects'
+            className='projects-btn'
             onClick={this.props.navClick}
             role='button'
             >
-            Contact Me
+            Projects
           </Link>
           </Zoom>
         </div>

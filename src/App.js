@@ -66,8 +66,8 @@ class App extends Component {
   navClick = (event) => {
     let el
     this.refs[this.state.active].classList.add('text-show', 'text-hide')
-    if (event.target.classList.contains('contact-btn')) {
-      el = this.refs[event.target.innerText.slice(0, 1) + event.target.innerText.slice(1, 7).toLowerCase()]
+    if (event.target.classList.contains('projects-btn')) {
+      el = this.refs[event.target.innerText.slice(0, 1) + event.target.innerText.slice(1, 8).toLowerCase()]
     } else {
       el = this.whichNav(event, el)
     }
