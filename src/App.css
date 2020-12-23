@@ -56,15 +56,15 @@ nav a:visited {
   font-size: 25px;
 }
 
-.Home.active-link ~ .arrow {
+.home.active-link ~ .arrow {
   top: 6.5%;
 }
 
-.Projects.active-link ~ .arrow {
+.projects.active-link ~ .arrow {
   top: 40.5%;
 }
 
-.Contact.active-link ~ .arrow {
+.contact.active-link ~ .arrow {
   top: 74.5%;
 }
 
@@ -679,15 +679,15 @@ nav a:visited {
     top: -14px;
     transform: rotate(90deg);
   }
-  .Home.active-link ~ .arrow {
+  .home.active-link ~ .arrow {
     top: -14px;
     left: 15%;
   }
-  .Projects.active-link ~ .arrow {
+  .projects.active-link ~ .arrow {
     top: -14px;
     left: 47.5%;
   }
-  .Contact.active-link ~ .arrow {
+  .contact.active-link ~ .arrow {
     top: -14px;
     left: 82%;
   }

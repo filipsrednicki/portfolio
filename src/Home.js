@@ -30,7 +30,6 @@ class Home extends Component {
           <Link
             to='/projects'
             className='projects-btn'
-            onClick={this.props.navClick}
             role='button'
             >
             Projects
