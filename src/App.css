@@ -723,8 +723,21 @@ nav a:visited {
   .content {
     margin-top: 70px;
   }
-  .projects-grid {
-    width: 320px !important;
+  .hover-img .project-title {
+    font-size: 1.3rem;
+  }
+  .hover-img:hover .more, .hover-img:focus .more {
+    right: 10px;
+  }
+  .hover-img:hover .visit, .hover-img:focus .visit {
+    left: 10px;
+  }
+  .hover-img .more,
+  .hover-img .visit {
+    width: 40%;
+  }
+  .hover-img .more, .visit {
+    font-size: 0.9rem;
   }
   .modal-content {
     margin: 0 15px !important;
