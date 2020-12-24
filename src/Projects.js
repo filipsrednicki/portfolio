@@ -26,14 +26,14 @@ class Projects extends Component {
       {
         title: 'Memory Game',
         url: 'https://filipsrednicki.github.io/memory-game/',
-        img: '/portfolio/img/memory-game.png',
+        img: '/portfolio/img/memory-game.jpg',
         delay: 300,
         description: 'The Memory Game Project is all about demonstrating my mastery of HTML, CSS, and JavaScript. I built a browser-based card matching game (also known as Concentration). But this isn’t just any memory game! It’s a shnazzy, well-designed, feature-packed memory game!'
       },
       {
         title: 'MyReads',
         url: 'https://filipsrednicki.github.io/myreads/',
-        img: '/portfolio/img/myreads.png',
+        img: '/portfolio/img/myreads.jpg',
         delay: 400,
         description: 'In this project, I had to create a bookshelf app (using React) that allows a user to select and categorize books he/she has read, are currently reading, or want to read. I was provided with an API server and client library that\'s used to persist information as user interacts with the application.'
       },
