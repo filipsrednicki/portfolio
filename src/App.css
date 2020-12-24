@@ -320,18 +320,28 @@ nav a:visited {
 .projects-grid {
   margin: 0 auto;
   padding-bottom: 20px;
-  display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 1250px;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* grid-template: 1fr 1fr / 1fr 1fr 1fr; */
+}
+
+.project {
+  max-width: 390px;
+  margin: 10px;
+  position: relative;
 }
 
 .project-img {
-  height: 300px;
-  max-width: 390px;
+  height: 100%;
 }
 
 .project-img img {
   width: 100%;
   height: 100%;
+  border-radius: 12px;
 }
 
 .hover-img {
@@ -343,6 +353,7 @@ nav a:visited {
   opacity: 0;
   overflow-x: hidden;
   text-align: center;
+  border-radius: 11px;
   transition: opacity 0.5s ease-in-out;
 }
 
