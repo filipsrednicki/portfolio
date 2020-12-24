@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {CSSGrid, makeResponsive} from 'react-stonecutter'
 import Fade from 'react-reveal/Fade'
 import Zoom from 'react-reveal/Zoom'
 import Slide from 'react-reveal/Slide'
@@ -98,19 +97,13 @@ class Projects extends Component {
   }
 
   render () {
-    const Grid = makeResponsive(CSSGrid, {maxWidth: 1300, defaultColumns: 3, minPadding: 130})
-
     return(
       <div className='content-projects'>
         <Zoom><h1 className='main-heading'>Projects</h1></Zoom>
         <Slide right><hr className='separator'/></Slide>
         <h2 className='p-placeholder'>Loading projects...</h2>
         <div className='load-grid' ref='imgGrid'>
-          <Grid
-            className='projects-grid'
-            columnWidth={390}
-            duration={0}
-            itemHeight={300}>
+          <div className='projects-grid'>
             {this.state.projects.map((project) => (
               <div
                 className='project'
@@ -127,7 +120,7 @@ class Projects extends Component {
                 </div>
               </div>
             ))}
-          </Grid>
+          </div>
 
           <div className='modal' onClick={this.openModal}>
             <div className='modal-content'>
