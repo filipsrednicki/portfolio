@@ -16,11 +16,7 @@ class App extends Component {
         </div>
         <div className='content'>
           <Switch>
-            <Route exact path='/' render={() => (
-                <Home
-                  navClick={this.navClick}
-                  />
-              )}/>
+            <Route exact path='/' component={Home}/>
             <Route path='/projects' component={Projects}/>
             <Route path='/contact' component={Contact}/>
             <Route path="*" component={NotFound}/>
@@ -32,8 +28,3 @@ class App extends Component {
 }
 
 export default App;
-// not found page
-// add new project
-// resize imgs
-// add loader to projects
-// warnings?
