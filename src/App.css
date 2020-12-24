@@ -71,19 +71,23 @@ nav a:visited {
 }
 
 .home.active-link ~ .arrow {
+  visibility: visible;
   top: 6.5%;
 }
 
 .projects.active-link ~ .arrow {
+  visibility: visible;
   top: 40.5%;
 }
 
 .contact.active-link ~ .arrow {
+  visibility: visible;
   top: 74.5%;
 }
 
 .arrow {
   position: absolute;
+  visibility: hidden;
   color: #F66031;
   transition: 0.3s ease-in-out;
 }

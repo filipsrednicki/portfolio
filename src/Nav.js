@@ -27,13 +27,15 @@ const Nav = () => {
     const pathname = location.pathname;
     if (activeRoute) {
       const nowActive = routes.findIndex((route) => route.path === pathname);
-      linkNameRefs[nowActive].current.classList.remove("text-hide");
-      linkNameRefs[nowActive].current.classList.add("text-show");
+      if (nowActive !== -1) {
+        linkNameRefs[nowActive].current.classList.remove("text-hide");
+        linkNameRefs[nowActive].current.classList.add("text-show");
+      }
 
-      const lastActive = routes.findIndex(
-        (route) => route.path === activeRoute
-      );
-      linkNameRefs[lastActive].current.classList.add("text-hide", "text-show");
+      const lastActive = routes.findIndex((route) => route.path === activeRoute);
+      if (lastActive !== -1) {
+        linkNameRefs[lastActive].current.classList.add("text-hide", "text-show");
+      }
     }
     setActiveRoute(pathname);
   }, [location.pathname]);
