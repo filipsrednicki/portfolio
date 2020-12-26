@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade'
 import Zoom from 'react-reveal/Zoom'
 import Slide from 'react-reveal/Slide'
+import Loader from "react-loader-spinner"
 import ReactDOM from 'react-dom';
 
 class Projects extends Component {
   state = {
-    loaded: [],
+    loaded: 0,
     openedProject: null,
     projects: [
       {
@@ -65,23 +66,10 @@ class Projects extends Component {
     }
   }
 
-  handleImageLoad = (event) => {
-    let imgAlt = event.target.alt
-
-    if(this.state.loaded.includes(imgAlt)) {
-      return
-    } else {
-      this.setState(() => ({
-        loaded: this.state.loaded.concat(imgAlt)
-      }))
-    }
-
-    if(this.state.loaded.length === 5) {
-      ReactDOM.findDOMNode(this.refs.imgGrid).previousSibling.style.visibility = 'hidden'
-      ReactDOM.findDOMNode(this.refs.imgGrid).previousSibling.style.opacity = '0'
-      ReactDOM.findDOMNode(this.refs.imgGrid).style.visibility = 'visible'
-    }
-
+  handleImageLoad = () => {
+    this.setState((state) => ({
+      loaded: state.loaded + 1
+    }))
   }
 
   render () {
@@ -89,8 +77,14 @@ class Projects extends Component {
       <div className='content-projects'>
         <Zoom><h1 className='main-heading'>Projects</h1></Zoom>
         <Slide right><hr className='separator'/></Slide>
-        <h2 className='p-placeholder'>Loading projects...</h2>
-        <div className='load-grid' ref='imgGrid'>
+        <Loader
+          type="Oval"
+          color="#F66031"
+          height={100}
+          width={100}
+          visible={this.state.loaded < this.state.projects.length}
+        />
+        <div className='load-grid' style={{ visibility: this.state.loaded === this.state.projects.length && "visible" }}>
           <div className='projects-grid'>
             {this.state.projects.map((project) => (
               <div
