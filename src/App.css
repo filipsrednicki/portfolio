@@ -47,7 +47,7 @@ html, body, #root {
 
 nav a:link,
 nav a:visited {
-  color: #184a95;
+  color: #2b6ac7;
   text-decoration: none;
 }
 
@@ -324,8 +324,6 @@ nav a:visited {
   flex-flow: row wrap;
   justify-content: center;
   max-width: 1250px;
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  /* grid-template: 1fr 1fr / 1fr 1fr 1fr; */
 }
 
 .project {
