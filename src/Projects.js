@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 class Projects extends Component {
   state = {
     loaded: [],
+    openedProject: null,
     projects: [
       {
         title: 'Neighborhood Map',
@@ -53,27 +54,13 @@ class Projects extends Component {
     ]
   }
 
-  openModal = (event) => {
-    let el = event.target
-    if (el.classList.contains('mb-close')) {
-      el.parentElement.parentElement.parentElement.classList.remove('show-modal')
-    }
-    if (el.classList.contains('modal')) {
-      el.classList.toggle('show-modal')
-    } else if (el.parentElement.parentElement.parentElement.nextSibling) {
-      el = event.target.parentElement.parentElement.parentElement.nextSibling
-      el.classList.toggle('show-modal')
-      this.state.projects.forEach((project) => {
-        if (project.title === event.target.previousSibling.innerText) {
-          el.firstChild.firstChild.innerHTML =
-          `<img src=${project.img} class='modal-img' alt='${project.title}'/>
-            <h1>${project.title}</h1>
-            <p class='modal-text'>${project.description}</p>`
-          el.firstChild.children[1].firstChild.href = project.url
-        }
-      })
-    } else {
-      return
+  openModal = (project) => {
+    this.setState({ openedProject: project})
+  }
+
+  closeModal = (e) => {
+    if(e.currentTarget === e.target) {
+      this.setState({ openedProject: null })
     }
   }
 
@@ -115,22 +102,28 @@ class Projects extends Component {
                 </div>
                 <div className='hover-img' tabIndex='0'>
                   <span className='project-title'>{project.title}</span>
-                  <span className='more' onClick={this.openModal} role='button' tabIndex='0'>Read more</span>
-                  <a href={project.url} role='button' tabIndex='0'><span className='visit'>View site</span></a>
+                  <span className='more' onClick={() => this.openModal(project)} role='button' tabIndex='0'>Read more</span>
+                  <a href={project.url} role='button' tabIndex='0' target="_blank"><span className='visit'>View site</span></a>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className='modal' onClick={this.openModal}>
-            <div className='modal-content'>
-              <div className='project-info'></div>
-              <div className='modal-buttons'>
-                <a href=''><span className='mb-view' role='button'>View site</span></a>
-                <span className='mb-close' role='button'>Close</span>
+          {this.state.openedProject && (
+            <div className="modal" onClick={this.closeModal}>
+              <div className='modal-content'>
+                <div className='project-info'>
+                  <img src={this.state.openedProject.img} className='modal-img' alt={this.state.openedProject.title}/>
+                  <h1>{this.state.openedProject.title}</h1>
+                  <p className='modal-text'>{this.state.openedProject.description}</p>
+                </div>
+                <div className='modal-buttons'>
+                  <a href={this.state.openedProject.url} target="_blank"><span className='mb-view' role='button'>View site</span></a>
+                  <span className='mb-close' onClick={() => this.setState({openedProject: null})} role='button'>Close</span>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
 
       </div>
