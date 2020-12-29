@@ -97,8 +97,8 @@ class Projects extends Component {
                 </div>
                 <div className='hover-img' tabIndex='0'>
                   <span className='project-title'>{project.title}</span>
-                  <span className='more' onClick={() => this.openModal(project)} role='button' tabIndex='0'>Read more</span>
-                  <a href={project.url} role='button' tabIndex='0' target="_blank"><span className='visit'>View site</span></a>
+                  <span className='more fab fa-info-circle' onClick={() => this.openModal(project)} role='button' tabIndex='0'></span>
+                  <a href={project.url} role='button' tabIndex='0' target="_blank"><span className='visit fas fa-link'></span></a>
                 </div>
               </div>
             ))}
