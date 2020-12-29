@@ -14,7 +14,7 @@ class Projects extends Component {
         title: 'Release Calendar',
         url: 'https://releases-cd8a7.web.app/',
         github: 'https://github.com/filipsrednicki/releases',
-        img: '/portfolio/img/release-calendar.jpg',
+        img: '/img/release-calendar.jpg',
         delay: 100,
         description: 'This app is built using React with Hooks and Context API. It\'s using Firebase Auth for creating and managing users and Realtime Database for storing and managing user\'s data. It\'s also using two API\'s: TMDB for fetching data about movies and tv shows; RAWG for games. Users can search for information about movies, tv shows and games. Once logged in, they can add them to their calendar to keep track of the release date.',
         additionalInfo: 'TEST ACCOUNT: e-mail - test@test.com, password - test123'
@@ -23,7 +23,7 @@ class Projects extends Component {
         title: 'Neighborhood Map',
         url: 'https://filipsrednicki.github.io/neighborhood-map/',
         github: 'https://github.com/filipsrednicki/neighborhood-map',
-        img: '/portfolio/img/neighborhood-map.jpg',
+        img: '/img/neighborhood-map.jpg',
         delay: 200,
         description: 'Single-page application built using React with addition of GoogleMapsAPI. Functionality of this application includes: map markers, a search function and a list view to support simple browsing of all locations. As well as using FoursquareAPI to provide additional information about each of these locations.'
       },
@@ -31,7 +31,7 @@ class Projects extends Component {
         title: 'Arcade Game: Frogger',
         url: 'https://filipsrednicki.github.io/arcade-game-frogger/',
         github: 'https://github.com/filipsrednicki/arcade-game-frogger',
-        img: '/portfolio/img/arcade-game.jpg',
+        img: '/img/arcade-game.jpg',
         delay: 300,
         description: 'I was provided visual assets and a game loop engine, using these tools I had to add a number of entities to the game including the player character and enemies. Additional functionality: collectibles, score, levels, winning/losing screen.'
       },
@@ -39,7 +39,7 @@ class Projects extends Component {
         title: 'Memory Game',
         url: 'https://filipsrednicki.github.io/memory-game/',
         github: 'https://github.com/filipsrednicki/memory-game',
-        img: '/portfolio/img/memory-game.jpg',
+        img: '/img/memory-game.jpg',
         delay: 400,
         description: 'The Memory Game Project is all about demonstrating my mastery of HTML, CSS, and JavaScript. I built a browser-based card matching game (also known as Concentration). But this isn’t just any memory game! It’s a shnazzy, well-designed, feature-packed memory game!'
       },
@@ -47,7 +47,7 @@ class Projects extends Component {
         title: 'MyReads',
         url: 'https://filipsrednicki.github.io/myreads/',
         github: 'https://github.com/filipsrednicki/myreads',
-        img: '/portfolio/img/myreads.jpg',
+        img: '/img/myreads.jpg',
         delay: 500,
         description: 'In this project, I had to create a bookshelf app (using React) that allows a user to select and categorize books he/she has read, are currently reading, or want to read. I was provided with an API server and client library that\'s used to persist information as user interacts with the application.'
       },
@@ -55,7 +55,7 @@ class Projects extends Component {
         title: 'Restaurant Reviews',
         url: 'https://filipsrednicki.github.io/mws-restaurant-stage-1/',
         github: 'https://github.com/filipsrednicki/mws-restaurant-stage-1',
-        img: '/portfolio/img/restaurant-reviews.jpg',
+        img: '/img/restaurant-reviews.jpg',
         delay: 600,
         description: 'I was provided code for a restaurant reviews website. The code had a lot of issues. It was barely usable on a desktop browser, much less a mobile device. It didn’t include any accessibility features and work offline at all. My task was to resolve these issues while still maintaining the included functionality.'
       }
