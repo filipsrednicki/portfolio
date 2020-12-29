@@ -104,9 +104,9 @@ class Projects extends Component {
                 <div className='hover-img' tabIndex='0'>
                   <span className='project-title'>{project.title}</span>
                   <div className="btn-container">
-                    <span className='more fab fa-info-circle' onClick={() => this.openModal(project)} role='button' tabIndex='0'></span>
-                    <a href={project.github} role='button' tabIndex='0' target="_blank"><span className='github fab fa-github-square'></span></a>
-                    <a href={project.url} role='button' tabIndex='0' target="_blank"><span className='visit fas fa-link'></span></a>
+                    <span title="Read More" className='more fab fa-info-circle' onClick={() => this.openModal(project)} role='button' tabIndex='0'></span>
+                    <a href={project.github} role='button' tabIndex='0' target="_blank" title="Github repository"><span className='github fab fa-github-square'></span></a>
+                    <a href={project.url} role='button' tabIndex='0' target="_blank" title="Live demo"><span className='visit fas fa-link'></span></a>
                   </div>
                 </div>
               </div>
