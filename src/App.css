@@ -349,7 +349,7 @@ nav a:visited {
   background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   opacity: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   text-align: center;
   border-radius: 11px;
   transition: opacity 0.5s ease-in-out;
@@ -372,53 +372,39 @@ nav a:visited {
   top: 15%;
 }
 
-.hover-img .more, .visit {
-  cursor: pointer;
+.btn-container {
   position: absolute;
+  width: 100%;
+  display: flex;
+  bottom: -500px;
+  justify-content: space-around;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-container a {
+  text-decoration: none;
+}
+
+.hover-img .more, .visit, .github {
+  cursor: pointer;
   display: block;
-  bottom: 20%;
-  font-size: 1.1rem;
+  font-size: 2.2rem;
   padding: 5px;
   color: #EDF7F6;
-  text-transform: uppercase;
-  transition: all 0.5s ease-in-out;
-  letter-spacing: 0.1rem;
-  border-radius: 25px;
-  background: linear-gradient(#232526, #184a95);
-  box-shadow: 0 4px rgba(35, 37, 38,0.9);
 }
 
-.hover-img:hover .more,
-.hover-img:focus .more {
-  right: 30px;
+.hover-img:hover .btn-container,
+.hover-img:focus .btn-container {
+  bottom: 15%;
 }
 
-.hover-img:hover .visit,
-.hover-img:focus .visit {
-  left: 30px;
-}
-
-.hover-img .more {
-  width: 35%;
-  right: -500px;
-}
-
-.hover-img .visit {
-  width: 35%;
-  left: -500px;
-}
-
-.hover-img .more:focus,
-.hover-img .visit:hover,
-.hover-img .more:hover {
+.btn-container a:focus,
+.more:focus,
+.visit:hover,
+.github:hover,
+.more:hover {
   -webkit-animation: jello-horizontal 0.9s both;
   animation: jello-horizontal 0.9s both;
-}
-
-.hover-img .visit:active,
-.hover-img .more:active {
-  box-shadow: 0 2px rgba(35, 37, 38,0.9);
-  transform: translateY(2px);
 }
 
 /*********/
@@ -712,19 +698,6 @@ nav a:visited {
   }
   .hover-img .project-title {
     font-size: 1.3rem;
-  }
-  .hover-img:hover .more, .hover-img:focus .more {
-    right: 10px;
-  }
-  .hover-img:hover .visit, .hover-img:focus .visit {
-    left: 10px;
-  }
-  .hover-img .more,
-  .hover-img .visit {
-    width: 40%;
-  }
-  .hover-img .more, .visit {
-    font-size: 0.9rem;
   }
   .modal-content {
     margin: 0 15px !important;
